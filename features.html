@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Features</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(-45deg, #142d4c, #2a5298, #00c6ff);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #sidebar {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            border-radius: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        
+        #sidebar:hover {
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        #sidebarText {
+            font-size: 18px;
+        }
+        
+        #featuresText {
+            display: none;
+            font-size: 18px;
+        }
+        
+        #sidebar.open #featuresText {
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh; /* Adjusted height for better visibility of button on smaller screens */
+            margin-top: 10vh; /* Centering content vertically */
+            color: white;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .feature-item {
+            font-size: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar" onclick="toggleSidebar()">
+        <span style="font-size: 24px">&#9776;</span>
+        <div id="sidebarText" style="font-size: 18px">Home</div>
+        <div id="featuresText" style="font-size: 18px">Features</div>
+    </div>
+    <div class="container">
+        <h1>Base Cheat Features</h1>
+        <ul class="feature-list">
+            <li class="feature-item">Unload</li>
+            <li class="feature-item">Streamproof</li>
+            <li class="feature-item">Team Check</li>
+            <li class="feature-item">Item Esp</li>
+            <li class="feature-item">Box Esp</li>
+            <li class="feature-item">Skeleton Esp</li>
+            <li class="feature-item">Chams-Invis/vis</li>
+            <li class="feature-item">Health Esp</li>
+            <li class="feature-item">Aimbot</li>
+            <li class="feature-item">TriggerBot</li>
+            <li class="feature-item">Anti-Recoil</li>
+            <li class="feature-item">Bhop</li>
+            <li class="feature-item">Radar</li>
+            <li class="feature-item">Head Esp</li>
+            <li class="feature-item">Pelvis Esp</li>
+            <li class="feature-item">Name Esp</li>
+            <li class="feature-item">Sound Esp</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("open");
+        }
+
+        function redirectToHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
